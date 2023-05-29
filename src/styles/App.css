@@ -1,0 +1,32 @@
+.Header{
+  background-color: blue;
+  width: max-content;
+}
+.Nav{
+  background-color: blue;
+  color: green;
+  text-decoration: none;
+  list-style: none;
+  font-size: large;
+  font-style: oblique;
+}
+
+Body{
+  background-color: bisque;
+  background-image: url(./img/812062.png);
+  background-repeat: no-repeat;
+  display: flex;
+  align-content: center;
+
+}
+.white{
+  color: black;
+}
+.black{
+  color: azure;
+}
+.Button{
+  background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
