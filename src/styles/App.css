@@ -40,3 +40,6 @@ display: flex;
 footer{
  width: 100%;
 }
+.episodeList{
+  list-style-type: none;
+}

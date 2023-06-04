@@ -1,4 +1,5 @@
 import '../styles/App.css';
+import '../styles/index.css';
 import Character from '../pages/Character';
 import Home from '../pages/Home';
 import NavBar from './NavBar';

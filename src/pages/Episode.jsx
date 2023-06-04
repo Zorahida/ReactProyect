@@ -14,7 +14,8 @@ function Episode() {
     const response = await axios.get(
             `https://rickandmortyapi.com/api/episode/?page=id`);
 
-        setListEpisodes(response.data.results);
+    const chapter = response.data.results.slice(0, 5)
+        setListEpisodes(chapter);
             //console.log(response.data.results);
         };
 
@@ -25,10 +26,14 @@ function Episode() {
     const renderEpisodes = () => {
         return listEpisodes.map((episode, i) => (
            <div key= {i}>
-             <h4>Episode number: {episode.id}</h4>
-             <p>{episode.url}</p>
-            <img src={episode.characters} alt={episode.name} />
-            <Link to={`/episode`}>
+             <h4 id="episodeList">Episode number: {episode.id}</h4>
+             <ul>
+             <li>{episode.name}</li>
+             <li>{episode.url}</li>
+             <li>{episode.air_date}</li>
+             <li>{episode.episode}</li>
+            </ul>
+            <Link to={'/episode/' + episode.name}>
             <CardEpisodes item={episode} />
           </Link>
         </div>
@@ -48,7 +53,7 @@ function Episode() {
     <div>
         <h2>Ricky&Morty</h2>
         <input
-        type="text"
+        type= "text"
         value={episodeFilter}
         onChange={handleFilterChange} />
         {filteredEpisodes.length > 0 ? (renderEpisodes() ) : (<p>Error</p>)}
