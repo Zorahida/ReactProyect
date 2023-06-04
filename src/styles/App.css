@@ -1,7 +1,18 @@
-.Header{
+header{
   background-color: blue;
-  width: max-content;
+  width: 100%;
 }
+
+body{
+  background-color: bisque;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./img/812062.png);
+  background-repeat: no-repeat;
+  display: flex;
+  align-content: center;
+}
+
 .Nav{
   background-color: blue;
   color: green;
@@ -11,13 +22,9 @@
   font-style: oblique;
 }
 
-Body{
-  background-color: bisque;
-  background-image: url(./img/812062.png);
-  background-repeat: no-repeat;
-  display: flex;
-  align-content: center;
-
+.Main{
+  width: 20%;
+display: flex;  
 }
 .white{
   color: black;
@@ -29,4 +36,7 @@ Body{
   background-color: red;
     color: black;
     border: 2px solid #4CAF50;
+}
+footer{
+ width: 100%;
 }
